@@ -1,3 +1,4 @@
+import 'package:chat_flutter/core/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatelessWidget {
@@ -5,15 +6,21 @@ class ChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: Column(
+    return Scaffold(
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          Text
           children: [
-            Center(
-                  child: Text('opa'),
-                ),
+            const Text('Chat page'),
+            TextButton(
+              onPressed: () {
+                AuthService().logout();
+              },
+              child: const Text('Logout'),
+            ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }

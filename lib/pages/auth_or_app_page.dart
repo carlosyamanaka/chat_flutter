@@ -8,10 +8,13 @@ import 'package:flutter/material.dart';
 class AuthOrAppPage extends StatelessWidget {
   const AuthOrAppPage({super.key});
 
+  Future<void> init() async {
+    
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: StreamBuilder<ChatUser?>(
+    return StreamBuilder<ChatUser?>(
         stream: AuthService().userChanges,
         builder: (ctx, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {

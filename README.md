@@ -18,7 +18,7 @@ Crie um projeto no Firebase Console:
 
 
 ### Acesse Firebase Console, crie um projeto e adicione seu aplicativo Flutter (iOS e Android).
-Ative os serviços necessários:
+Mude no código os links para linkar com o seu firebase. E Ative os serviços necessários:
 
 
 **Authentication:** Ative o método de autenticação por e-mail e senha.
